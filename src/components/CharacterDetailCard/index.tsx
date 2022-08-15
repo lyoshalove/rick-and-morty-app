@@ -1,8 +1,8 @@
 import React from 'react';
-import {Image, View, Text, ImageBackground} from 'react-native';
+import { Image, View, Text, ImageBackground } from 'react-native';
 import characterCardBg from '../../assets/images/character-bg.jpg';
 import styled from 'styled-components/native';
-import {theme} from '../../theme/theme';
+import { theme } from '../../theme/theme';
 
 interface IProps {
   name: string;
@@ -70,7 +70,7 @@ export const CharacterDetailCard: React.FC<IProps> = ({
   return (
     <StyledWrapper>
       <StyledBackground source={characterCardBg} />
-      <StyledAvatar source={{uri: image}} />
+      <StyledAvatar source={{ uri: image }} />
       <StyledCharacterInfo>
         <StyledStatus>{status}</StyledStatus>
         <StyledName>{name}</StyledName>

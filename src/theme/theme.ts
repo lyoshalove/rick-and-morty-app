@@ -9,6 +9,8 @@ export const theme = {
       white: '#FFFFFF',
       gray: '#C7C7CC',
       lightGray: '#6E798C',
+      lineGray: '#CCC',
+      cardBorder: '#EFEFF4',
     },
     gray: {
       gray1: '#8E8E93',

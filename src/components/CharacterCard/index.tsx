@@ -1,9 +1,9 @@
 import React from 'react';
-import {Image, View, Text, TouchableOpacity} from 'react-native';
-import {ICharacterMainScreen} from '../../types/character';
+import { Image, View, Text, TouchableOpacity } from 'react-native';
+import { ICharacterMainScreen } from '../../types/character';
 import styled from 'styled-components/native';
-import {theme} from '../../theme/theme';
-import {useNavigation} from '@react-navigation/native';
+import { theme } from '../../theme/theme';
+import { useNavigation } from '@react-navigation/native';
 
 export const CharacterCard: React.FC<ICharacterMainScreen> = ({
   id,
@@ -13,9 +13,9 @@ export const CharacterCard: React.FC<ICharacterMainScreen> = ({
 }) => {
   const navigation = useNavigation();
   const StyledWrapper = styled.TouchableOpacity`
-    border: 1px solid #efeff4;
+    border: 1px solid ${theme.colors.basic.cardBorder};
     border-radius: 8px;
-    margin: 0 7px 20px;
+    margin: 0 8px 20px;
     width: 46%;
   `;
 
@@ -50,7 +50,7 @@ export const CharacterCard: React.FC<ICharacterMainScreen> = ({
           id,
         })
       }>
-      <StyledImage source={{uri: image}} alt={name} />
+      <StyledImage source={{ uri: image }} alt={name} />
       <StyledInfo>
         <StyledStatus>{status}</StyledStatus>
         <StyledName>{name}</StyledName>

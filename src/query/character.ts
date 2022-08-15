@@ -6,7 +6,15 @@ export const GET_ONE_CHARACTER = gql`
       name,
       image,
       status,
-      species
+      species,
+      gender,
+      type,
+      origin {
+        name
+      },
+      location {
+        name
+      }
     }
   }
 `;
